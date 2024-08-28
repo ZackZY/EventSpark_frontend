@@ -88,7 +88,7 @@ jobs:
       run: |
         # Due to public ECR can only be logged into from the us-east-1 region
         # Try to switch region by this step
-        aws configure set region ${{ env.AWS_REGION }}
+        aws configure set region ap-southeast-1
 
     - name: Download the task definition
       run: aws ecs describe-task-definition --task-definition ${{ env.TASK_NAME }} --query taskDefinition --region ap-southeast-1 > task-definition.json
