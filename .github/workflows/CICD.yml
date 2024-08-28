@@ -61,6 +61,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         role-to-assume: arn:aws:iam::381491878469:role/ecr_ecs_assume_role
         aws-region: us-east-1
+        mask-aws-account-id: false
 
     - name: Login to Amazon ECR Public
       id: login-ecr-public
